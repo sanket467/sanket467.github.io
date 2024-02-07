@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Will You Be My Valentine?</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .content {
+    text-align: center;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+  .paragraph-style {
+    display: block;
+    font-size: 1.2rem; /* Adjust font size as needed */
+    margin: 0 auto; /* Center horizontally */
+    max-width: 600px; /* Set maximum width */
+    padding: 20px; /* Add padding for readability */
+    border: 2px solid #ccc; /* Add a border for styling */
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    background-color: #f9f9f9; /* Set background color */
+  }
+
+  .emoji-button {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+</style>
+<script>
+  function moveButton() {
+    var button = document.getElementById('noButton');
+    // Calculate maximum X and Y coordinates based on window dimensions and button size
+    var maxX = window.innerWidth - button.offsetWidth;
+    var maxY = window.innerHeight - button.offsetHeight;
+    // Generate random coordinates within the visible area of the screen
+    var randomX = Math.floor(Math.random() * maxX);
+    var randomY = Math.floor(Math.random() * maxY);
+    // Set button position
+    button.style.position = 'absolute';
+    button.style.left = randomX + 'px';
+    button.style.top = randomY + 'px';
+  }
+</script>
+</head>
+<body style="background-color: rgb(232, 118, 186);">
+  <div class="content">
+    <img src = "images.png"/>
+    <h1 class="paragraph-style">My pyalu Pranjal ❤️ , I am sorry I worked so late. Can you forgive me and be My Valentine? &#x1F497; &#x1F497; &#x1F497;</h1>
+    <button class="emoji-button" onclick="alert('That\'s wonderful! Happy Valentine\'s Day!')">❤️ Yes</button>
+    <button id="noButton" class="emoji-button" onclick="moveButton()">🛑 No</button>
+  </div>
+</body>
+</html>
